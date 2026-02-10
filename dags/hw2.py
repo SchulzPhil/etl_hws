@@ -60,12 +60,12 @@ def kaggel_to_postgres():
             (min_temp_days + max_temp_days)
         )
 
-        # execute_values(
-        #     cur,
-        #     'INSERT INTO iot_temperature_calendar '
-        #     'VALUES %s',
-        #     calendar
-        # )
+        execute_values(
+            cur,
+            'INSERT INTO iot_temperature_calendar '
+            'VALUES %s',
+            calendar
+        )
 
         conn.commit()
 
